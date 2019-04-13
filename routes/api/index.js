@@ -1,8 +1,9 @@
-const route= require('express').Router()
+    
+const route = require('express').Router()
 
-route.use('/users',require('./users'))
-route.use('/product',require('./product'))
+route.use('/users', require('./users'))
+route.use('/products', require('./products'))
 
- exports=module.exports={
-     route
- }
+exports = module.exports = {
+    route
+}
