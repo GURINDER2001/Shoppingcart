@@ -2,7 +2,7 @@ const Product = require('../../db').Product
 const route = require('express').Router();
 
 route.get('/', (req, res) => {
-
+    // Get all products
     Product.findAll()
         .then((products) => {
             res.status(200).send(products)
@@ -15,11 +15,13 @@ route.get('/', (req, res) => {
 })
 
 route.post('/', (req, res) => {
+    // Validate the values
     if (isNaN(req.body.price)) {
         return res.status(403).send({
             error: "Price is not valid number"
         })
     }
+    // Add a new product
     Product.create({
         name: req.body.name,
         manufacturer: req.body.manufacturer,
