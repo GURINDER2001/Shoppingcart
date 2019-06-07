@@ -34,5 +34,18 @@ route.post('/', (req, res) => {
         })
     })
 })
+route.delete('/',(req,res)=>{
+    Product.destroy({
+        where: {
+          name: req.body.name
+        }
+      }).then(() => {
+        console.log("Done");
+      }).catch((error) => {
+        res.status(501).send({
+            error: "Error adding product"
+        })
+    })
 
+})
 exports = module.exports = route

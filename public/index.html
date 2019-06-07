@@ -8,19 +8,52 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 <script src="shop.js"></script>
-<script src="index.js"></script>   
-<title>Document</title>
+<script src="add-products.js"></script> 
+<script src="index.js"></script>
+
+
+  
+<title>FAMOUS FOOTGEARS</title>
 </head>
 <body>
     
     <div class="container">
         <div class="row">
-            <div class="col"></div><div class="col m-4 p-3"><h2>FAMOUS FOOTGEAR</h2></div>
-        <div class="col"></div>
+            <div class=" col-2"><a href="add-product.html"><h2>+</h2>ADD PRODUCT</a></div>
+            <div class="col-2"></div><div class="col m-4"><h2>FAMOUS FOOTGEAR</h2></div>
+
+        <div class="col-1"><button type="button" class="btn btn-link"><h1  id="cart-btn" class="text-right m-1 "  data-toggle="modal" data-target="#myModal">🛒</h1></button> </div>
+          
+       
     </div>
-        <div class="row" id="product-list">
+    </div>
+           <div class="row m-5 " id="product-list">
            </div>
-    </div>
-</body>
+
+
+           <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+           <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+        
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                        <h4 class="modal-title">CART</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+               
+                </div>
+                <div class="modal-body row" id="cart_items">
+                <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+
+        </body>         
 </html>
