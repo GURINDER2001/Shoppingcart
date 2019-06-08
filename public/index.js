@@ -9,13 +9,6 @@ $(function() {
          productList.append(createcard(product))
      }
  })
-
- fetchCart(function(cartitems){
-     cartItems.empty()
-     for(items of cartitems){
-         cartItems.append(cartCard(items))
-     }
- })
 })
 
 
